@@ -1,0 +1,162 @@
+/* ** Main colors: **
+soft white = hsl(0, 5%, 96%);
+light blue hsl(193, 30%, 85%);
+dark teal = hsl(194, 51%, 20%);
+almost black = hsl(196, 19%, 15%);
+*/
+
+html {
+    background: hsl(193, 30%, 85%);
+    background: linear-gradient(90deg, hsla(193, 30%, 85%, 0.69) 0%,
+    hsl(0, 5%, 96%) 100%);
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: hsl(196, 19%, 15%);
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: hsl(194, 51%, 20%);
+    margin: 2rem 0 1rem 0;
+}
+
+h3 {
+    background-color: hsl(193, 30%, 85%);
+    border: 3px groove hsl(193, 30%, 90%);
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: hsl(194, 51%, 20%);
+    margin: 0 0 1rem 0;
+    padding: 0.5rem;
+}
+
+.container {display: flex; flex-direction: column;}
+
+#formContainer,
+#listContainer  {
+    box-shadow: 6px 8px 13px -5px hsla(0, 0%, 0%, 0.3);
+    background-color: hsl(0, 5%, 96%);
+    border-radius: 0.2rem;
+    margin: 2rem auto;
+}
+
+#formContainer {width: 80%; padding: 2rem;}
+
+#listContainer {
+    overflow-x:auto;
+    width: 90%;
+    padding: 0.5rem;
+}
+
+
+/* Form styling */
+
+label, form p {font-weight: 400;}
+
+input {margin-right: 1em;}
+
+input, select {    
+    border: 2px ridge hsl(193, 30%, 90%);
+    border-radius: 4px;
+    margin-bottom: 1.5em;
+    padding: 5px;
+}
+
+input:first-of-type {width: 55%;}
+
+
+/* Tasks list/table styling */
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9rem;
+}
+  
+thead {
+    border: 3px groove hsl(193, 30%, 90%);
+    background-color: hsl(193, 30%, 85%);
+    font-family: 'Patrick Hand', cursive;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: hsl(194, 51%, 20%);
+    margin: 0 0 1rem 0;
+    padding: 0.5rem;
+}
+
+.clickable {cursor: pointer;}
+.clickable:hover, .active {
+    background-color: hsl(193, 30%, 75%);
+}
+
+tr:nth-child(even){background-color: hsla(192, 29%, 90%, 0.443);}
+
+td {
+    border: 1px solid hsl(0, 0%, 87%);
+    padding: 8px;
+}
+
+td:nth-of-type(3) span:first-of-type,
+td:nth-of-type(4) span:first-of-type {
+    border-bottom: 1px solid hsl(0, 0%, 50%);
+}
+
+
+/* Buttons */
+
+button {
+    background-color: hsl(193, 50%, 40%);
+    border: 3px solid hsl(193, 50%, 35%);
+    border-radius: 0.3em;
+    margin-top: 1em;
+    padding: 0.2em 1.5em;
+    color: hsl(0, 5%, 96%);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: hsla(193, 50%, 40%, 0.612);
+    border: 3px solid hsla(193, 50%, 35%, 0.502);
+}
+
+.deleteBtn {
+    font-size: 1.3em;
+    border-bottom: none;
+    margin: 0 0.5em;
+    cursor: pointer;
+}
+
+.deleteBtn:hover {color: hsla(0, 97%, 38%, 0.918);}
+
+#navButtonsRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 5px 0;
+}
+
+
+@media(min-width: 992px) {
+
+    h1 {text-align: left; margin: 2rem 0 0.5rem 5rem;}
+    h3 {font-size: 1.5rem;}
+
+    .container {flex-direction: row;}
+    
+    #formContainer {width: 30%; padding: 2rem;}
+    #listContainer {width: 50%; padding: 2rem;}
+
+    input:first-of-type {width: 80%;}
+
+    thead {font-size: 1.5rem;}
+    table {font-size: 1rem;}
+}
